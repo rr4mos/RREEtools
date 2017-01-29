@@ -1,0 +1,25 @@
+
+
+BLOCO DENSITY OF STATES
+=======================
+*COMPILA ENERGIAS DO ESPECTRO 
+getallspectra.sh --> compila dados do espectro todo buscando pelos diretorios allmods (padrao de armazenamento)
+	getspectra.py
+
+*ANALISA DADOS (DISPERSAO DO ESPECTRO)
+	dispersao.py  --> para fazer os graficos de linhas com dispersao (var***)
+
+
+BLOCO ORBITAIS
+==============
+* GERA ANALISE DE ORBITAIS (ENERGIAS E PSI^2 POR ANEL)
+RUNanalisaOrbs.sh  --> roda dentro do diretorio com os arquivos .out (mopac)
+	arc2mop.py
+	gettopo.py
+	analisaorbitais.py
+	extende.py
+
+* GERA ANALISE DE EXTENSAO DOS ORBITAIS X ENERGIA
+
+
+
