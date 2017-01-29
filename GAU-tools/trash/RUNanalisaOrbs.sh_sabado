@@ -1,0 +1,46 @@
+
+#uso: RUNanalisaOrbs.sh num.atms no.de.aneis no.total.de.orbitais no.de.orbitais.analisados 
+
+
+tools=/home/rramos/Dropbox/RREE-tools/GAU-tools
+#Gera pdb educado via babel com CONECT
+
+#for arq in $(ls *.com)
+#do 
+#	echo $arq
+#	python $tools/arc2mop.py $arq $1
+#done 
+
+#Gera topologia do backbone
+for arq in $(ls *.com)
+do 
+	name=`echo "$arq" | cut -d'.' -f1`
+
+	echo 'running babel...'	
+	babel -igzmat mol0.com -opdb  $name.pdb
+	echo 'running gettopo...'
+	python $tools/gettopo.py $name.pdb $1 > $name-RINGS	
+done
+
+
+#Analisa os orbitais
+for arq in $(ls *.com) 
+do 
+	name=`echo "$arq" | cut -d'.' -f1`
+
+	echo "gerando os psi^2..."
+	python $tools/Orbitais-AM1_GAU.py $name $1 $3 $4 > $name-ORBITAIS
+
+	echo 'parando antes da analise de extensao... 01/03/15'
+	exit
+
+	echo "analisando extensao..."
+	python $tools/extende.py $arq-ORBITAIS $2 $3 > $arq-EXTENSAO
+	echo "extende:: analisa ateh: HOMO -$3"
+done
+
+	grep 'vetone:' *EXTENSAO | awk '{print $2}' > .evec
+	grep 'energy:' *EXTENSAO | awk '{print $2}' > .eval
+	paste .eval .evec > patch-eigen.dat
+
+

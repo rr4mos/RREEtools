@@ -1,0 +1,23 @@
+0. gera arquivos conexos-0.dat e conexos-1.dat
+
+conexos-0.dat::  tools/runout.sh 0
+conexos-1.dat::  tools/runout.sh 1
+
+1. coloca os pythoscripts no dir que estão os XXX-inst (aqui!)
+
+2. Análise dos espectros:: correlatespec.sh (usa o spreadL.py)
+
+com primeiro comando (conexos-0.dat), move pro LxE/homo
+com segundo  comando (conexos-1.dat), move pro LxE/both
+arquivo grace com o formato no LxE/ 
+
+3. Correlação de ângulos:: correlateangs.sh
+
+acerta o diretorio do ARM nos scripts *.py
+
+XXX-pxcb.dat :: angulos polares onde tem quebra de conj.
+XXX-pxcnonb.dat :: angulos polares onde não tem quebra de conj
+XXX-axcb.dat :: angulos (3 valores) onde tem quebra // bug.pelo n.uso.
+
+roda o getallpolar.sh 
+

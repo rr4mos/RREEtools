@@ -1,0 +1,6 @@
+
+allpatches.dat	W-	sistema / LxE / mapa binario do estado (todos) 
+		<<	gerados por getcomparis.py
+
+allconexos.dat	W-	resumo da pasta com apenas estados conexos LxE
+		<< 	gerado por conexo.py

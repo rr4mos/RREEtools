@@ -1,0 +1,6 @@
+generalizações de procedimentos <-> scripts
+
+OLD: analisaorbitais.py ==> gera:  $arq-ORBITAIS
+NEW: Orbitais-AM1_GAU.py
+
+

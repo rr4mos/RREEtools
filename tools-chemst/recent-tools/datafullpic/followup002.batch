@@ -1,0 +1,70 @@
+ARRANGE(11,1,0.1,0.1,0.1)
+
+WITH G0
+READ "datafullpicture001-inst/data002.dat"  
+G0.S0 LINE TYPE  2
+G0.S0 FILL 2
+G0.S0 FILL PATTERN 13
+XTHICK 1
+
+WITH G1
+READ "datafullpicture010-inst/data002.dat"  
+G1.S0 LINE TYPE  2
+G1.S0 FILL 2
+G1.S0 FILL PATTERN 13
+
+WITH G2
+READ "datafullpicture020-inst/data002.dat"  
+G2.S0 LINE TYPE  2
+G2.S0 FILL 2
+G2.S0 FILL PATTERN 13
+
+WITH G3
+READ "datafullpicture030-inst/data002.dat"  
+G3.S0 LINE TYPE  2
+G3.S0 FILL 2
+G3.S0 FILL PATTERN 13
+
+WITH G4
+READ "datafullpicture040-inst/data002.dat"  
+G4.S0 LINE TYPE  2
+G4.S0 FILL 2
+G4.S0 FILL PATTERN 13
+
+WITH G5
+READ "datafullpicture050-inst/data002.dat"  
+G5.S0 LINE TYPE  2
+G5.S0 FILL 2
+G5.S0 FILL PATTERN 13
+
+WITH G6
+READ "datafullpicture060-inst/data002.dat"  
+G6.S0 LINE TYPE  2
+G6.S0 FILL 2
+G6.S0 FILL PATTERN 13
+
+WITH G7
+READ "datafullpicture070-inst/data002.dat"  
+G7.S0 LINE TYPE  2
+G7.S0 FILL 2
+G7.S0 FILL PATTERN 13
+
+WITH G8
+READ "datafullpicture080-inst/data002.dat"  
+G8.S0 LINE TYPE  2
+G8.S0 FILL 2
+G8.S0 FILL PATTERN 13
+
+WITH G9
+READ "datafullpicture090-inst/data002.dat"  
+G9.S0 LINE TYPE  2
+G9.S0 FILL 2
+G9.S0 FILL PATTERN 13
+
+WITH G10
+READ "datafullpicture100-inst/data002.dat"  
+G10.S0 LINE TYPE  2
+G10.S0 FILL 2
+G10.S0 FILL PATTERN 13
+
+KILL G11
